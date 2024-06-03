@@ -3,9 +3,6 @@ using Statistics
 using Random
 using Permutations
 
-include(joinpath(@__DIR__,"free_fermions.jl"))
-include(joinpath(@__DIR__,"auxiliary.jl"))
-
 # Auxiliary functions
 
 function BinToDec(bin::Array{Int})::UInt
