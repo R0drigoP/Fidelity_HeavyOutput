@@ -257,7 +257,7 @@ function rand_CUE(N)::Matrix{ComplexF64}
     
     Q, R = qr(A)
 
-    lambda = diagm([R[i,i]/abs(R[i,i]); for i in 1:N])
+    lambda = diagm([R[i,i]/abs(R[i,i]) for i in 1:N])
 
     return Q*lambda
 end
