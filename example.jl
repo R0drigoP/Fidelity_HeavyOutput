@@ -10,9 +10,9 @@ include(joinpath(@__DIR__,"libs.jl"))
 
 function main()
 
-    L::UInt32 = parse(UInt32, ARGS[1]) # nb of qubits
-    T::UInt32 = parse(UInt32, ARGS[2]) # max nb of layers
-    It::UInt32 = parse(UInt32, ARGS[3]) # nb of iterations to average
+    L::UInt64 = parse(UInt64, ARGS[1]) # nb of qubits
+    T::UInt64 = parse(UInt64, ARGS[2]) # max nb of layers
+    It::UInt64 = parse(UInt64, ARGS[3]) # nb of iterations to average
 
     alpha = parse(Float64, ARGS[4])
     prob = parse(Float64, ARGS[5])
@@ -35,7 +35,7 @@ function main()
         
         for t in 1:T
             
-            psi0, psi0_t = random_faulty_perm(psi0, psi0_t, L, prob)
+            psi0, psi0_t = random_faulty_perm1D(psi0, psi0_t, L, prob)
             
             for q1 in 1:2:L-1
                 
