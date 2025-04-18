@@ -1,4 +1,5 @@
 # Fidelity vs Heavy output
+Code used in the paper Fidelity decay and error accumulation in random quantum circuits [arXiv:2404.11444](https://arxiv.org/abs/2404.11444).
 
 This repository serves to give an example of how to compute the average fidelity and heavy output frequency of a random quantum circuit, which consists on the action of (faulty) permutations and then (faulty) two-qubit gates.
 
